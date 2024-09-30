@@ -33,3 +33,9 @@
 Чтобы вернуть остаток, а затем присвоить значение:
 
 `y %= 3`
+
+## Google style guide
+[Ссылка](https://google.github.io/styleguide/go/)
+
+## Uber style guide
+[Ссылка](https://github.com/uber-go/guide/blob/master/style.md)
