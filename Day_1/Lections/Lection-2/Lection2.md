@@ -31,15 +31,15 @@ fmt.Printf("%T\n", uid)
 Оператор ```:=``` слева от себя требует ***КАК МИНИМУМ ОДНУ НОВУЮ ПЕРЕМЕННУЮ***.
 ```
 //Множественное присваивание через :=
-	aArg, bArg := 10, 30
-	fmt.Println(aArg, bArg)
-	aArg, bArg = 30, 40
-	fmt.Println(aArg, bArg)
-	// aArg, bArg := 10, 30
-	// fmt.Println(aArg, bArg)
+aArg, bArg := 10, 30
+fmt.Println(aArg, bArg)
+aArg, bArg = 30, 40
+fmt.Println(aArg, bArg)
+// aArg, bArg := 10, 30
+// fmt.Println(aArg, bArg)
 
-	//Исключение из этого правила
-	bArg, cArg := 300, 400
-	fmt.Println(aArg, bArg, cArg)
+//Исключение из этого правила
+bArg, cArg := 300, 400
+fmt.Println(aArg, bArg, cArg)
 
 ```

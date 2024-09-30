@@ -41,4 +41,18 @@ func main() {
 	var value = 275.00
 	var taxes float32 = 27.50
 	fmt.Println(value + float64(taxes))
+
+	// Короткое присваивание
+	result := false
+	value, new_value := 3.12, 121 // value exists but new_value is new
+	fmt.Println("Results:", new_value, result)
+
+	// Ввод данных
+	var (
+		number int
+		s string
+	)
+
+	fmt.Scan(&number, &s)
+	fmt.Println(number, s)
 }
