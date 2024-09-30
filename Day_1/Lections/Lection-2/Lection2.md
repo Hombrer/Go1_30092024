@@ -18,13 +18,13 @@ fmt.Println("My age is:", age)
 Простейший случай единичной инициализации
 ```
 //Декларирование и инициализация пользовательским значением
-	var height int = 183
-	fmt.Println("My height is:", height)
+var height int = 183
+fmt.Println("My height is:", height)
 
-	//В чем "полустрогость" типзации?
-	var uid = 12345
-	fmt.Println("My uid:", uid)
-	fmt.Printf("%T\n", uid)
+//В чем "полустрогость" типизации?
+var uid = 12345
+fmt.Println("My uid:", uid)
+fmt.Printf("%T\n", uid)
 ```
 
 #### Короткое присваивание
