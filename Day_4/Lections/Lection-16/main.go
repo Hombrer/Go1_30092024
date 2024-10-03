@@ -67,6 +67,17 @@ func main()  {
     ptr2 := returnPointer()		
 	fmt.Printf("ptr1 -> Type: %T, address: %v and value: %v\n", ptr1, ptr1, *ptr1)
 	fmt.Printf("ptr2 -> Type: %T, address: %v and value: %v\n", ptr2, ptr2, *ptr2)
+
+	arr := [3]int{1, 2, 3}
+	fmt.Println("Before calling mutation:", arr)
+	mutation(&arr)
+	fmt.Println("After calling mutation:", arr)
+
+	newArr := [3]int{2, 5, 8}
+	fmt.Println("Before calling mutation:", newArr)
+	mutationSlice(newArr[:])
+	fmt.Println("After calling mutation:", newArr)
+
 }
 
 // 8.1 Определение функции, принимающей указатель как параметр
@@ -77,4 +88,20 @@ func changeParam(value *int) {
 func returnPointer() *int {
 	var numeric int = 321
 	return &numeric // В момент возврата Go перемещает данную переменную в кучу
+}
+
+// 10. Указатели на массивы
+func mutation(arr *[3]int) {
+	// (*arr)[1] = 900
+	// (*arr)[2] = 1000
+	// Но можно писать и так, потому что Go сам разыменует указатель на массив
+	// (из-за того, что функция принимает *arr)
+	arr[1] = 900
+	arr[2] = 1000
+}
+
+// 11. Лучше используйте слайсы(это идеоматично с точки зрения Go)
+func mutationSlice(sls []int) {
+	sls[1] = 900
+	sls[2] = 1000
 }
