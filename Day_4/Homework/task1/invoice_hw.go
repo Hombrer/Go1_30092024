@@ -20,3 +20,7 @@ invoice = NewInvoice()
 order = NewOrder()
 
 */
+
+package main
+
+// Ваш код
