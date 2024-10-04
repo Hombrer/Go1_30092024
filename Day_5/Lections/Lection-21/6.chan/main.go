@@ -18,6 +18,6 @@ func main() {
 	done := make(chan bool)
 	fmt.Println("I'm main goroutine and I wanna call newGoRoutine")
 	go newGoRoutine(done)
-	<-done
+	<- done
 	fmt.Println("Ok, Main goroutine recieved data and gonna die!")
 }

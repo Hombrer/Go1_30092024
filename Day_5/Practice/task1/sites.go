@@ -6,7 +6,7 @@
 	
 	import (
 		"net/http"
-		"io/ioutil"
+		"io"
 	)
 
 	// Получить URL:
@@ -15,7 +15,7 @@
 	defer response.Body.Close()
 	
 	// Получить тело ответа
-	body, err := ioutil.ReadAll(response.Body)
+	body, err := io.ReadAll(response.Body)
 
 	// Рекомендую создать соответствующую структуру Page с полями URL и Size
 	
@@ -23,7 +23,7 @@
 package main
 
 
-func responseSize(...) { ... }
+// func responseSize(...) { ... }
 	
 
-func main() {...}
+// func main() {...}

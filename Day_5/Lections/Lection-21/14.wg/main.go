@@ -18,7 +18,7 @@ func process(i int, wg *sync.WaitGroup) {
 	fmt.Println("started Goroutine ", i)
 	time.Sleep(2 * time.Second)
 	fmt.Printf("Goroutine %d ended\n", i)
-	wg.Done() //WaitGroup--
+	wg.Done() // WaitGroup--
 }
 
 func main() {

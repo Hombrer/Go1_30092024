@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // 1. Закрытие каналов и итерирование
 // Со стороны получателя можно использоваться синтаксис
@@ -19,16 +21,16 @@ func generator(ch chan int) {
 func main() {
 	ch := make(chan int)
 	go generator(ch)
-	for {
-		val, ok := <-ch
-		if !ok {
-			break
-		}
-		fmt.Println("Recieved from channel", val)
-	}
+	// for {
+	// 	val, ok := <-ch
+	// 	if !ok {
+	// 		break
+	// 	}
+	// 	fmt.Println("Recieved from channel", val)
+	// }
 
 	// Конструкцию можно упростить и использовать
-	// for val := range ch {
-	// 	fmt.Println("Recieved from channel:", val)
-	// }
+	for val := range ch {
+		fmt.Println("Recieved from channel:", val)
+	}
 }
